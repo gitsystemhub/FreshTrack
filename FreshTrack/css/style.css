@@ -1,0 +1,91 @@
+:root {
+    --fresh-green: #28a745;
+    --dark-green: #1e7e34;
+    --light-green: #d4edda;
+    --fresh-yellow: #ffc107;
+    --fresh-orange: #fd7e14;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(40, 167, 69, 0.8), rgba(40, 167, 69, 0.6)), 
+                url('../images/farm-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* Product Cards */
+.product-card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--bs-primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -1.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
+}
+
+/* Status Badges */
+.badge-harvested { background-color: var(--fresh-green); }
+.badge-processed { background-color: var(--fresh-yellow); color: #212529; }
+.badge-shipped { background-color: var(--bs-primary); }
+.badge-delivered { background-color: var(--fresh-orange); }
+.badge-on_shelf { background-color: var(--bs-dark); }
+
+/* Freshness Meter */
+.freshness-meter {
+    height: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+}
